@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #2b0f6e, #3a6df0);
+  min-height: 100vh;
+}
+
+.auth-container,
+.dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.auth-card,
+.dashboard-card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-card h2,
+.dashboard-card h2 {
+  margin: 0 0 0.5rem;
+  color: #2b0f6e;
+}
+
+.auth-card input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.auth-card button,
+.dashboard-card button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: #3a6df0;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.auth-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-card button:hover:not(:disabled),
+.dashboard-card button:hover {
+  background: #2b0f6e;
+}
+
+.error {
+  color: #d33;
+  background: #ffecec;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.protected-msg {
+  background: #eef3ff;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* --- Employee Management styles --- */
+.ems-page {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.ems-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.ems-header h1 {
+  margin: 0 0 0.25rem;
+  color: #2b0f6e;
+}
+
+.ems-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-form input {
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-width: 220px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #3a6df0;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #2b0f6e;
+}
+
+.btn-secondary {
+  background: #eee;
+  color: #333;
+}
+
+.notice {
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.ems-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ems-table th,
+.ems-table td {
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.ems-table th {
+  background: #f7f8fc;
+  color: #444;
+}
+
+.status {
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.status-active {
+  background: #e3f7e8;
+  color: #1a7a37;
+}
+
+.status-on-leave {
+  background: #fff4e0;
+  color: #a65c00;
+}
+
+.status-terminated {
+  background: #fde6e6;
+  color: #b3261e;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.link-danger {
+  background: none;
+  border: none;
+  color: #d33;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+}
+
+.ems-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+.ems-form input,
+.ems-form select {
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row > * {
+  flex: 1;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
